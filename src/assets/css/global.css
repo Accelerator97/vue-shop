@@ -4,4 +4,26 @@ body,
     height: 100%;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+/* 覆盖elementui原有样式 最好写在global.css中 */
+.el-breadcrumb {
+    margin-bottom: 15px;
+    font-size: 12px;
+
+}
+
+.el-card{
+    box-shadow: 0 1px 1px rgba(0,0,0,0.15)!important
+    /* 默认情况下卡片自身的样式权重比较高 加上important保证样式生效*/
+}
+
+.el-table {
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+.el-pagination{
+    margin-top: 15px;
 }
