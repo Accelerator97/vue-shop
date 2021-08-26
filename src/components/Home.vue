@@ -38,7 +38,7 @@
             <!-- 一级菜单的模版区域 -->
             <template slot="title">
               <!-- 一级菜单图标 -->
-              <!-- 动态绑定 每次循环时根据一级菜单的id添加对应的字体图标属性 -->
+              <!-- 动态绑定 每次循环时根据一级菜单的id添加对应的图标属性 -->
               <i :class="iconsObj[item.id]"></i>
               <!-- 一级菜单文本 -->
               <span>{{ item.authName }}</span>
@@ -94,6 +94,7 @@ export default {
     this.activePath = window.sessionStorage.getItem('activePath')
   },
   methods: {
+    //点击退出按钮，清空token，跳转登录页
     logout() {
       window.sessionStorage.clear();
       this.$router.push("/login"); //重定向跳转到登录页
@@ -102,7 +103,7 @@ export default {
     async getMenuList() {
       const { data: res } = await this.$http.get("menus");
       if (res.meta.status !== 200) return this.$message.error(res.meta.msg);
-      //   console.log(res);
+      // console.log(res);
       this.menulist = res.data;
     },
     toggleCollapse() {
@@ -126,23 +127,22 @@ export default {
   background-color: #373d41;
   display: flex;
   justify-content: space-between;
-  padding-left: 0;
-  align-items: center; //让按钮居中
+  align-items: center; //弹性盒模型 按钮会铺满整个盒子，所以设置垂直居中
+  padding-left: 10px;
   color: #fff;
   font-size: 20px;
 }
 .home-header {
-  max-height: 60px;
+  height: inherit;
   border-radius: 50%;
   display: flex;
   align-items: center;
 }
 .home-headerLogo {
-  display: inline-block;
-  height: 60px;
+  height: inherit;
 }
 .home-header .home-headerLogo > img {
-  height: 60px;
+  height: inherit; //只设置高度继承父盒子，避免图片变形
   border-radius: 50%;
 }
 .home-header span {

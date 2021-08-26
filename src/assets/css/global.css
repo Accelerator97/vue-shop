@@ -5,6 +5,7 @@ body,
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    min-width: 1366px;
 }
 
 /* 覆盖elementui原有样式 最好写在global.css中 */
