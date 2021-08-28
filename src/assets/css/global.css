@@ -12,7 +12,6 @@ body,
 .el-breadcrumb {
     margin-bottom: 15px;
     font-size: 12px;
-
 }
 
 .el-card{
@@ -27,4 +26,24 @@ body,
 
 .el-pagination{
     margin-top: 15px;
+}
+.el-cascader-panel{
+    height: 300px;
+}
+/* 隐藏cascader菜单选项前面的单选框 */
+.el-radio__inner {
+    border-radius: 0;
+    border: 0;
+    width: 170px;
+    height: 34px;
+    background-color: transparent;
+    cursor: pointer;
+    box-sizing: border-box;
+    position: absolute;
+    top: -18px;
+    left: -19px;
+}
+ /* 隐藏cascader菜单选项前面的单选框 */
+.el-radio__input.is-checked .el-radio__inner {
+    background: transparent;
 }

@@ -43,7 +43,7 @@ export default {
         return this.$message.error("获取列表失败");
       }
       this.rightList = res.data;
-      console.log(this.rightList);
+      // console.log(this.rightList);
     },
   },
 };
