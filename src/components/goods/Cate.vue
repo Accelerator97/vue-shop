@@ -144,7 +144,11 @@ export default {
           type: "template",
           template: "order",
         },
-        { label: "操作", prop: "", type: "template", template: "opt" },
+        { 
+          label: "操作", 
+          prop: "", 
+          type: "template", 
+          template: "opt" },
       ],
       addCateDialogVisible: false, //控制添加分类对话框的显示与隐藏
       addCateForm: {
@@ -230,7 +234,7 @@ export default {
         this.addCateForm.cat_pid = 0;
         this.addCateForm.cat_level = 0;
       }
-       this.$refs.cascaderHandle.dropDownVisible = false
+      this.$refs.cascaderHandle.dropDownVisible = false
     },
     addCateDialogClosed() {
       //当关闭添加分类对话框时，重置表单
